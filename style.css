@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+
+
+/* 
+
+font-family: 'Grape Nuts', cursive;
+
+*/
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+html,body{
+width: 100vw;
+/* height: 100vh; */
+scroll-behavior: smooth;
+}
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(4, 1, 1); 
+  border-radius: 10px;
+  border: none;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+  border-radius: 10px;
+  border: none;
+}
+
+
+
+
+
+
+.wrapper{
+        width: 100%;
+        height: 100vh;
+        overflow-x:hidden ;
+}
+
+
+
+
+
+
+/* // hamburger css code */
+
+.hamburger{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left:88vw;
+  top: 2.5vw;
+  border: .5px solid black;
+  position: fixed;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+
+.hamburger .spandiv1{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  overflow: hidden;
+}
+.hamburger .spandiv2{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+.hamburger #checkbox{
+  position: absolute;
+  z-index: 10;
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+  cursor: pointer;
+}
+.hamburger .spandiv1 span{
+  width: 55px;
+  height: 4px;
+  border: transparent;
+  border-radius: 100px;
+  background-color: black;
+  
+  
+}
+.hamburger .spandiv2 :nth-child(1){
+  width: 0;
+  height: 2px;
+  border: transparent;
+  border-radius: 100px;
+  background-color: black;
+  transform: rotate(45deg);
+  position: absolute;
+  
+}
+.hamburger .spandiv2 :nth-child(2){
+  width: 0;
+  height: 2px;
+  border: transparent;
+  border-radius: 100px;
+  background-color: black;
+  transform: rotate(-45deg);
+  position: absolute;
+  
+}
+
+
+
+/* hamburger css ends here */
+
+
+
+/* ------------------------------------------------------------------------------- */
+
+
+/* menu page css starts from here */
+.menupage{
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        color: white;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 200px;
+        font-family: 'Poppins', sans-serif;
+        z-index: 100;
+        overflow: hidden;
+        top: -100%;
+}
+
+.socialstripe{
+  position: absolute;
+  right: 2%;
+  top: 85%;
+  height: 9vh;
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.socialstripe span{
+ height: 2px;
+ width: 170px;
+ background-color: black;
+ padding-right: 10px;
+}
+.socialstripe a{
+  height: 50px;
+  width:50px;
+ text-decoration: none;
+ border: .3px solid black;
+ border-radius: 50%;
+padding: 3px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 25px;
+transition: all 0.5s  ease-in-out;
+}
+
+
+
+
+.socialstripe a i{
+  color: black;
+  transition: all .6s ease-in-out;
+}
+.menubetween{
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translate(0, -50%);
+  height: 10vw;
+  width: 10vw;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.menubetween .menuimagecont{
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.menubetween img{
+  height: 200%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background-position: bottom;
+
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top:50%;
+  left: 0;
+  left: -35vw;
+  transform: translate(0, -50%) rotate(100deg);
+  border-radius: 50%;
+  height: 70vw;
+  width: 70vw;
+  border: 2px solid #dadada;
+}
+
+.stripe {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  height: 60px;
+  width: 100%;
+  transform-origin: 0% 50%;
+  overflow: hidden;
+}
+
+.str1 {
+  transform: translate(0, -50%) rotate(-30deg);
+}
+.str2 {
+  transform: translate(0, -50%) rotate(-15deg);
+}
+.str4 {
+  transform: translate(0, -50%) rotate(15deg);
+}
+.str5 {
+  transform: translate(0, -50%) rotate(30deg);
+}
+
+.first{
+  height: 100%;
+  width: 51.5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.smallcircle{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #dadada;
+  float: right;
+}
+.sec{
+  height: 100%;
+  width: calc(100% - 50.2%);
+  padding-left: 40px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.sec h2{
+font-size:3vw;
+font-weight: 400;
+}
+
+
+.sec h2 a{
+text-decoration: none;
+color: black;
+}
+
+
+
+
+
+
+
+
+.panel{
+  height: 45%;
+  width: 5%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+.minicircle{
+  border-radius: 50%;
+  width: 3vw;
+  height: 3vw;
+  border: 2px solid black;
+  opacity: 0.1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 1.3rem;
+}
+
+
+
+
+/* menu page css ends here */
+
+/* ------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* page1 css starts from here  */
+
+.page1wrapper{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+}
+.page1wrapper h1{
+ font-size: 10vw;
+}
+
+
+
+
+
+/* page1 css ends here */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive design */
+
+@media only screen and (max-width: 600px) {
+
+.page1{
+  background: url("https://images.unsplash.com/photo-1639353014154-8b9da8815d84?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position:center;
+  background-size: cover;
+}
+
+.page1 .nav{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:transparent ;
+}
+
+
+.page1 .nav h1 {
+  color:white;
+  -webkit-text-stroke: .5px;
+  -webkit-text-stroke-color: black;
+  font-size:5vw;
+  font-family: 'Orbitron', sans-serif;
+  transition: all ease 2s;
+  cursor: pointer;
+}
+
+
+  .hamburger{
+    height: 50px;
+    width: 50px;
+    top: 3%;
+    left: 82%;
+    border: 0.5px solid white;
+  }
+
+.hamburger .spandiv2{
+  /* background-color: red; */
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+}
+.hamburger #checkbox{
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+}
+.hamburger .spandiv1 span{
+  width: 30px;
+  height: 3px;
+  border: transparent;
+  border-radius: 100px;
+  background-color: black;
+}
+
+
+
+.locationstick{
+  left: 3%;
+  height: 100%;
+  display: none;
+}
+
+.page1 .locationstick .globegif{
+  height: 200px;
+  width: 50px;
+  display: none;
+}
+
+
+
+.herotextsection{
+  top: 60%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  /* background-color: bisque; */
+}
+.herotextsection h2{
+  font-size: 3.5vh;
+  white-space: nowrap;
+  color: black;
+}
+.herotextsection h3{
+  font-size: 1.7vh;
+  white-space: nowrap;
+  color: black;
+}
+
+.revealtext{
+  width: 80%;
+  height: 100px;
+  left: 10%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.revealtextenglish{
+  padding: 5px;
+  border-radius: 5px;
+  height: fit-content;
+  /* border: .5px solid black; */
+  background-color: transparent;
+  opacity: 1;
+}
+.revealtextjapanese{
+  padding: 10px;
+  /* border: .5px solid black; */
+  background-color: transparent;
+  opacity: 1;
+  height: fit-content;
+  border-radius: 10px;
+}
+
+
+.revealtextenglish span{
+  font-size: 2vh;
+  color: black;
+  opacity: 0;
+  font-family: 'Poppins', sans-serif;
+ }
+
+ .revealtextjapanese span{
+  font-weight: 600;
+  font-size: 2vh;
+  color: black;
+ }
+
+
+
+ .herotextsection img{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  }
+
+
+  .socialstripe{
+    height: 6vh;
+    width: 40vh;
+    right: 10%;
+    top: 90%;
+  }
+  .socialstripe span{
+   width: 100px;
+  }
+  .socialstripe a{
+   padding: 2px 10px;
+   transition: none;
+  }
+  /* .socialstripe a:hover i{
+   scale: 1;
+   color: black;
+  } */
+
+
+
+  .stripe .sec h2{
+    font-size:3vh;
+    font-weight: 400;
+    }
+
+
+
+
+
+
+
+.panel{
+height: 250px;
+width: 50px;
+/* background-color: bisque; */
+}
+.minicircle{
+height: 4vh;
+width: 4vh;
+}
+.circle{
+  top: 50%;
+  height: 50vh;
+  width:50vh;
+}
+.stripe{
+  /* background-color: red; */
+  height: 4vh;
+}
+.first{
+  width: 54.5%;
+}
+.sec{
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+.sec h2{
+  font-size: 2.2vh;
+}
+.smallcircle{
+height: 10px;
+width: 10px;
+
+}
+
+.menuimagecont{
+  height: 100px;
+  width: 100px;
+}
+.menuimagecont img{
+  height: 100px;
+  width: 100px;
+}
+
+
+
+
+}
+
+@media(hover : hover){
+
+  .socialstripe :nth-child(2):hover i{
+    color:  #0077b5;
+    scale: 1.5;
+}
+.socialstripe :nth-child(3):hover i{
+    color: #1DA1F2;
+    scale: 1.5;
+}
+.socialstripe :nth-child(4):hover i{
+    scale: 1.5;
+}
+.socialstripe :nth-child(5):hover i{
+    scale: 1.5;
+}
+.page1 .locationstick .globegif .globediv:hover{
+  opacity: 0;
+ } 
+
+
+ .page1 .rightherocontent img:hover{
+  filter: blur(2px);
+  transform: scale(1.2);
+  z-index: 0;
+      }
+
+}
